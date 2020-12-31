@@ -13,6 +13,7 @@ const app = express();
 app.use(express.json());
 
 // Use Routes
+app.use('/api/posts', posts);
 app.use('/api/abilities', abilties);
 
 // Create Port

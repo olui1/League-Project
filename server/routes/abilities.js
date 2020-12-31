@@ -1,7 +1,6 @@
 const express = require("express");
-const db = require('../db/abilities_db');
-
 const router = express.Router();
+const db = require('../db/abilities_db');
 
 // Get all skills
 router.get('/:champion', async (req, res, next) => {
