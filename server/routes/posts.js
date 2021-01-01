@@ -32,4 +32,28 @@ router.get('/', async (req, res, next) => {
         console.log(e);
     }
 });
+
+// Update a comment
+router.put('/:id', async (req, res, next) => {
+    try {
+        let results = await db.one(req.body.name, req.body.comment, req.params.id);
+        res.json(results);
+        console.log(results);
+    }
+    catch(e) {
+        console.log(e);
+    }
+});
+
+// Delete a comment
+router.delete('/:id', async (req, res, next) => {
+    try {
+        let results = await db.one(req.params.id);
+        res.status(204);
+    }
+    catch(e) {
+        console.log(e);
+    }
+});
+
 module.exports = router;

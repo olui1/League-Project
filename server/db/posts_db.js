@@ -13,6 +13,7 @@ postsdb.one = (id, name, comment) => {
                 return resolve(results);
             })
             connection.release();
+            if(err) throw err;
         });  
     })
 }
@@ -28,6 +29,39 @@ postsdb.all = () => {
                 return resolve(results);
             })
             connection.release();
+            if(err) throw err;
+        });  
+    })
+}
+
+// Update a comment
+postsdb.one = (name, comment, id) => {
+    return new Promise((resolve, reject) => {
+        mysqlConf.getConnection((err, connection) => {
+            connection.query('UPDATE league.posts SET name = ?, comment = ? where id = ?', [name, comment, id], (err, results) => {
+                if(err){
+                    return reject(err);
+                }
+                return resolve(results);
+            })
+            connection.release();
+            if(err) throw err;
+        });  
+    })
+}
+
+// Delete a comment
+postsdb.one = (id) => {
+    return new Promise((resolve, reject) => {
+        mysqlConf.getConnection((err, connection) => {
+            connection.query('DELETE FROM league.posts where id = ?', [id], (err, results) => {
+                if(err){
+                    return reject(err);
+                }
+                return resolve(results);
+            })
+            connection.release();
+            if(err) throw err;
         });  
     })
 }
