@@ -36,7 +36,7 @@ router.get('/', async (req, res, next) => {
 // Update a comment
 router.put('/:id', async (req, res, next) => {
     try {
-        let results = await db.one(req.body.name, req.body.comment, req.params.id);
+        let results = await db.update(req.body.name, req.body.comment, req.params.id);
         res.json(results);
         console.log(results);
     }
@@ -48,8 +48,10 @@ router.put('/:id', async (req, res, next) => {
 // Delete a comment
 router.delete('/:id', async (req, res, next) => {
     try {
-        let results = await db.one(req.params.id);
-        res.status(204);
+        let results = await db.delete(req.params.id);
+        res.status(204).json({
+            status: "success"
+        });
     }
     catch(e) {
         console.log(e);

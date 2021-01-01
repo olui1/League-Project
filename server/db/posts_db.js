@@ -35,7 +35,7 @@ postsdb.all = () => {
 }
 
 // Update a comment
-postsdb.one = (name, comment, id) => {
+postsdb.update = (name, comment, id) => {
     return new Promise((resolve, reject) => {
         mysqlConf.getConnection((err, connection) => {
             connection.query('UPDATE league.posts SET name = ?, comment = ? where id = ?', [name, comment, id], (err, results) => {
@@ -51,7 +51,7 @@ postsdb.one = (name, comment, id) => {
 }
 
 // Delete a comment
-postsdb.one = (id) => {
+postsdb.delete = (id) => {
     return new Promise((resolve, reject) => {
         mysqlConf.getConnection((err, connection) => {
             connection.query('DELETE FROM league.posts where id = ?', [id], (err, results) => {
