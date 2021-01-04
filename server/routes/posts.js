@@ -5,7 +5,7 @@ const db = require('../db/posts_db');
 // Post a comment
 router.post("/", async (req, res, next) => {
     try{
-        let results = await db.one(req.body.id, req.body.name, req.body.comment);
+        let results = await db.one(req.body.name, req.body.comment);
         res.status(201).json({
             status: "success",
             data: {

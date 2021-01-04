@@ -4,23 +4,23 @@ class Navbar extends Component {
 
     render(){
         return(
-            <nav class="navbar navbar-expand-sm navbar-dark bg-dark d-flex justify-content-end">
-                <div class="d-flex justify-content-end">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                    <a class="nav-link active" href="#">Home</a>
+            <nav className="navbar navbar-expand-sm navbar-dark bg-dark d-flex justify-content-end">
+                <div className="d-flex justify-content-end">
+                <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
+                    <li className="nav-item">
+                    <a className="nav-link active" href="/">Home</a>
                     </li>
-                    <li class="nav-item">
-                    <a class="nav-link active" href="#">User Search</a>
+                    <li className="nav-item">
+                    <a className="nav-link active" href="/searchUser">User Search</a>
                     </li>
-                    <li class="nav-item">
-                    <a class="nav-link active" href="#">Leaderboard</a>
+                    <li className="nav-item">
+                    <a className="nav-link active" href="/leaderboard">Leaderboard</a>
                     </li>
-                    <li class="nav-item">
-                    <a class="nav-link active" href="#">Champions</a>
+                    <li className="nav-item">
+                    <a className="nav-link active" href="/champions">Champions</a>
                     </li>
                 </ul>
-                </div>
+                </div> 
             </nav>
         )
     }

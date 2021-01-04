@@ -2,14 +2,12 @@ import React from 'react'
 
 const PostsList = () => {
     return (
-        <div className="list-group">
-            <table className="table table-hover table-dark">
-                <thead>
-                    <tr className="bg-primary">
-                        <th scope="row">Name</th>
-                    </tr>
-                </thead>
-            </table>            
+        <div>
+            <div class="d-grid gap-3">
+                <div class="p-2 bg-light border">Grid item 1</div>
+                <div class="p-2 bg-light border">Grid item 2</div>
+                <div class="p-2 bg-light border">Grid item 3</div>
+            </div>           
         </div>
     )
 }

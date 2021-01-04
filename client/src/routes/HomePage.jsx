@@ -1,14 +1,28 @@
 import React from 'react';
 import Header from '../components/Header';
-import Navbar from '../components/Navbar';
+import PostsList from '../components/PostsList'
 
-const HomePage = () => {
-    return (
+
+class HomePage extends React.Component{
+    constructor(props){
+        super(props);
+        this.onCreatePage = this.onCreatePage.bind(this);
+    }
+
+    onCreatePage(){
+        this.props.history.push('/posts/create')
+    }
+
+    render() {
+        return (
         <div>
-            <Navbar/>
             <Header/>
+            <div class="d-flex justify-content-end">
+                <button className="btn btn-primary my-3" onClick={this.onCreatePage}>Create New Post</button>
+            </div>
+            <PostsList/>
         </div>
-    )
+        )
+    }
 }
-
-export default HomePage
+export default HomePage;
