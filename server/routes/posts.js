@@ -14,7 +14,6 @@ router.post("/", async (req, res, next) => {
                 comment: req.body.comment
             }
         })
-        console.log(req.body);
     }
     catch(e) {
         console.log(e);
@@ -26,7 +25,17 @@ router.get('/', async (req, res, next) => {
     try {
         let results = await db.all(req.body);
         res.json(results);
-        console.log(results);
+    }
+    catch(e) {
+        console.log(e);
+    }
+});
+
+// Get one comment
+router.get('/:id', async (req, res, next) => {
+    try {
+        let results = await db.rone(req.params.id);
+        res.json(results);
     }
     catch(e) {
         console.log(e);
@@ -38,7 +47,6 @@ router.put('/:id', async (req, res, next) => {
     try {
         let results = await db.update(req.body.name, req.body.comment, req.params.id);
         res.json(results);
-        console.log(results);
     }
     catch(e) {
         console.log(e);

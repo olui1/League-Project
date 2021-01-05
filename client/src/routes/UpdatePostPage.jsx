@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import UpdatePosts from '../components/UpdatePosts';
 
 const UpdatePostPage = () => {
     return (
         <div>
-            Update Posts Here
+            <UpdatePosts/>
         </div>
     )
 }

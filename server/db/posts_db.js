@@ -34,6 +34,22 @@ postsdb.all = () => {
     })
 }
 
+// Retrieve a comment
+postsdb.rone = (id) => {
+    return new Promise((resolve, reject) => {
+        mysqlConf.getConnection((err, connection) => {
+            connection.query('SELECT * FROM league.posts where id = ?', [id], (err, results) => {
+                if(err){
+                    return reject(err);
+                }
+                return resolve(results);
+            })
+            connection.release();
+            if(err) throw err;
+        });  
+    })
+}
+
 // Update a comment
 postsdb.update = (name, comment, id) => {
     return new Promise((resolve, reject) => {

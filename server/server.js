@@ -1,5 +1,6 @@
 require("dotenv").config();
-const express = require("express")
+const express = require("express");
+const cors = require("cors");
 const abilties = require('./routes/abilities');
 const posts = require('./routes/posts');
 
@@ -8,6 +9,9 @@ const apiKey = process.env.LOL_API_KEY;
 
 // Init server
 const app = express();
+
+// cors middleware - connects the server and client domain
+app.use(cors());
 
 // express middleware
 app.use(express.json());

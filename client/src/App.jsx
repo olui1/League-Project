@@ -10,6 +10,7 @@ import LeaderboardPage from './routes/LeaderboardPage';
 import UpdatePostPage from './routes/UpdatePostPage';
 import UsersearchPage from './routes/UsersearchPage';
 import { PostsContextProvider } from './context/PostsContext';
+import './App.css'
 
 const history = createBrowserHistory();
 
