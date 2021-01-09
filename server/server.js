@@ -3,6 +3,7 @@ const express = require("express");
 const cors = require("cors");
 const abilties = require('./routes/abilities');
 const posts = require('./routes/posts');
+const champions = require('./routes/champions');
 
 // Retrieve API_Key from .env
 const apiKey = process.env.LOL_API_KEY;
@@ -19,6 +20,7 @@ app.use(express.json());
 // Use Routes
 app.use('/api/posts', posts);
 app.use('/api/abilities', abilties);
+app.use('/api/champions', champions);
 
 // Create Port
 const port = process.env.PORT || 5000;

@@ -38,7 +38,7 @@ const PostsList = (props) => {
 
     return (
         <div>
-            <div class="d-grid mb-4 gap-3">
+            <div className="d-grid mb-4 gap-3">
                 {posts && posts.map(post => {
                     return(
                         <div key={post.id} className="p-2 rounded" style={{backgroundColor: "#290661", color: "white"}}>
