@@ -14,4 +14,15 @@ router.get('/', async (req, res, next) => {
     }
 });
 
+// Get one champion
+router.get('/:champion', async (req, res, next) => {
+    try {
+        let results = await db.one(req.params.champion);
+        res.json(results);
+    }
+    catch(e) {
+        console.log(e);
+    }
+});
+
 module.exports = router;

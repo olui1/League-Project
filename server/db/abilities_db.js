@@ -6,7 +6,7 @@ let abilitiesdb = {};
 abilitiesdb.all = (champion) => {
     return new Promise((resolve, reject) => {
         mysqlConf.getConnection((err, connection) => {
-            connection.query('SELECT * FROM league.abilities WHERE CHAMPION = ?', [champion], (err, results) => {
+            connection.query("SELECT * FROM league.abilities WHERE CHAMPION = ? ORDER BY FIELD(Type, 'Passive', 'Q', 'W', 'E', 'R')", [champion], (err, results) => {
                 if(err){
                     return reject(err);
                 }

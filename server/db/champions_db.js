@@ -17,4 +17,20 @@ championsdb.all = () => {
     })
 }
 
+// Retrieve a Champion
+championsdb.one = (champion) => {
+    return new Promise((resolve, reject) => {
+        mysqlConf.getConnection((err, connection) => {
+            connection.query('SELECT * FROM league.champions where Champions = ?', [champion], (err, results) => {
+                if(err){
+                    return reject(err);
+                }
+                return resolve(results);
+            })
+            connection.release();
+            if(err) throw err;
+        });  
+    })
+}
+
 module.exports = championsdb;

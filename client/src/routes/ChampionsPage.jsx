@@ -49,7 +49,7 @@ class ChampionsPage extends Component {
                     return(
                         <div key={champion.id} style={{backgroundColor: "#290661", color: "white"}}>
                             <div>
-                                <a href={`/champions/${champion.id}`}>
+                                <a href={`/champions/${champion.Champions}`}>
                                     <img className="championImage" alt={`${champion.ChampionsNoSpace}`} src={`http://ddragon.leagueoflegends.com/cdn/img/champion/tiles/${champion.ChampionsNoSpace}_0.jpg`}/>
                                 </a>
                             </div>
