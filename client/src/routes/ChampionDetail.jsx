@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import AbilitiesFinder from '../apis/AbilitiesFinder';
 import ChampionsFinder from '../apis/ChampionsFinder';
-import { v4 as uuidv4 } from 'uuid';
+import first from '../utils/accessor';
 
 export default class ChampionDetail extends Component {
     constructor(props){
         super(props);
         this.state={
             abilities: [],
-            champions: []
+            champions: {},
+            isLoading: false
         }
     }
 
@@ -16,44 +17,56 @@ export default class ChampionDetail extends Component {
         const id = this.props.match.params.id;
         const abilitiesResponse = await AbilitiesFinder.get(`/${id}`);
         const championsResponse = await ChampionsFinder.get(`/${id}`);
-        this.setState({abilities: abilitiesResponse.data})
-        this.setState({champions: championsResponse.data})
+        this.setState({
+            abilities: abilitiesResponse.data,
+            champions: first(championsResponse.data),
+            isLoading: true
+        })
         console.log(this.state.abilities)
         console.log(this.state.champions)
     }
   
     render() {
-        const {abilities, champions} = this.state;
+        const { abilities, champions, isLoading } = this.state;
         const id = this.props.match.params.id;
-        return (
-            <div>
-                {champions.map(champ => {
-                    return(
-                    <div key={champ.id}>
-                        <img className="championLoadImage" src={`http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champ.ChampionsNoSpace}_0.jpg`}/>
-                        {champ.Champions}
+
+        if (isLoading && champions && abilities.length > 0) {
+            return(
+                <div>
+                    <div className="d-flex justify-content-center" key={champions.id}>
+                        <img className="championLoadImage" src={`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champions.ChampionsNoSpace}_0.jpg`}/>  
                     </div> 
-                    )
-                })}
-                {abilities.map(champ => {
-                    for(const property in champ){
-                        if(champ[property] == "")
-                            champ[property] = 'N/A'
-                    }
-                    return(
-                        <div key={uuidv4()}>
-                        <div className="p-3 m-3 rounded" style={{backgroundColor: "#290661", color: "white", borderColor:"black"}}>
-                            {champ.Ability} <br/>
-                            Type: {champ.Type} <br/>
-                            Range: {champ.Range} <br/>
-                            Cooldown: {champ.Cooldown} <br/>
-                            Cost: {champ.Cost} <br/>
-                            {champ.Description}
-                        </div>
-                        </div>
-                    )
-                })}  
-            </div>
-        )
+                    <div className="mb-3 display-5 text-center" style={{color: "White"}}>
+                    {champions.Champions}
+                    </div>
+                    {abilities.map((champ, index) => {
+                        for(const property in champ){
+                            if(champ[property] == "")
+                                champ[property] = 'N/A'
+                        }
+                        return(
+                            <div key={index}>
+                            <div className="d-flex p-3 mb-3 rounded" style={{backgroundColor: "#290661", color: "white", borderColor:"black"}}>
+                                <div className="me-auto m-3">
+                                <img src={process.env.PUBLIC_URL + `/skills/${champions.ChampionsNoSpace}${champ.Type}.png`}/> <br/>
+                                {champ.Ability}
+                                </div>
+                                <div className="me-auto m-3">
+                                Type: {champ.Type} <br/>
+                                Range: {champ.Range} <br/>
+                                Cooldown: {champ.Cooldown} <br/>
+                                Cost: {champ.Cost} 
+                                </div>
+                                <div className="m-3">
+                                {champ.Description}
+                                </div>
+                            </div>
+                            </div>
+                        )
+                    })}  
+                </div>
+            )
+        }
+        return (<div>NOT FOUND</div>) 
     }
 }
