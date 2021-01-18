@@ -1,0 +1,606 @@
+[
+    {
+        "id": 266,
+        "champion": "Aatrox"
+    },
+    {
+        "id": 103,
+        "champion": "Ahri"
+    },
+    {
+        "id": 84,
+        "champion": "Akali"
+    },
+    {
+        "id": 12,
+        "champion": "Alistar"
+    },
+    {
+        "id": 32,
+        "champion": "Amumu"
+    },
+    {
+        "id": 34,
+        "champion": "Anivia"
+    },
+    {
+        "id": 1,
+        "champion": "Annie"
+    },
+    {
+        "id": 523,
+        "champion": "Aphelios"
+    },
+    {
+        "id": 22,
+        "champion": "Ashe"
+    },
+    {
+        "id": 136,
+        "champion": "Aurelion Sol"
+    },
+    {
+        "id": 268,
+        "champion": "Azir"
+    },
+    {
+        "id": 432,
+        "champion": "Bard"
+    },
+    {
+        "id": 53,
+        "champion": "Blitzcrank"
+    },
+    {
+        "id": 63,
+        "champion": "Brand"
+    },
+    {
+        "id": 201,
+        "champion": "Braum"
+    },
+    {
+        "id": 51,
+        "champion": "Caitlyn"
+    },
+    {
+        "id": 164,
+        "champion": "Camille"
+    },
+    {
+        "id": 69,
+        "champion": "Cassiopeia"
+    },
+    {
+        "id": 31,
+        "champion": "Chogath"
+    },
+    {
+        "id": 42,
+        "champion": "Corki"
+    },
+    {
+        "id": 122,
+        "champion": "Darius"
+    },
+    {
+        "id": 131,
+        "champion": "Diana"
+    },
+    {
+        "id": 119,
+        "champion": "Draven"
+    },
+    {
+        "id": 36,
+        "champion": "Dr.Mundo"
+    },
+    {
+        "id": 245,
+        "champion": "Ekko"
+    },
+    {
+        "id": 60,
+        "champion": "Elise"
+    },
+    {
+        "id": 81,
+        "champion": "Ezreal"
+    },
+    {
+        "id": 9,
+        "champion": "Fiddlesticks"
+    },
+    {
+        "id": 114,
+        "champion": "Fiora"
+    },
+    {
+        "id": 105,
+        "champion": "Fizz"
+    },
+    {
+        "id": 3,
+        "champion": "Galio"
+    },
+    {
+        "id": 41,
+        "champion": "Gangplank"
+    },
+    {
+        "id": 86,
+        "champion": "Garen"
+    },
+    {
+        "id": 150,
+        "champion": "Gnar"
+    },
+    {
+        "id": 79,
+        "champion": "Gragas"
+    },
+    {
+        "id": 104,
+        "champion": "Graves"
+    },
+    {
+        "id": 120,
+        "champion": "Hecarim"
+    },
+    {
+        "id": 74,
+        "champion": "Heimerdinger"
+    },
+    {
+        "id": 420,
+        "champion": "Illaoi"
+    },
+    {
+        "id": 39,
+        "champion": "Irelia"
+    },
+    {
+        "id": 427,
+        "champion": "Ivern"
+    },
+    {
+        "id": 40,
+        "champion": "Janna"
+    },
+    {
+        "id": 59,
+        "champion": "Jarvan IV"
+    },
+    {
+        "id": 24,
+        "champion": "Jax"
+    },
+    {
+        "id": 126,
+        "champion": "Jayce"
+    },
+    {
+        "id": 202,
+        "champion": "Jhin"
+    },
+    {
+        "id": 222,
+        "champion": "Jinx"
+    },
+    {
+        "id": 145,
+        "champion": "Kai'sa"
+    },
+    {
+        "id": 429,
+        "champion": "Kalista"
+    },
+    {
+        "id": 43,
+        "champion": "Karma"
+    },
+    {
+        "id": 30,
+        "champion": "Karthus"
+    },
+    {
+        "id": 38,
+        "champion": "Kassadin"
+    },
+    {
+        "id": 55,
+        "champion": "Katarina"
+    },
+    {
+        "id": 10,
+        "champion": "Kayle"
+    },
+    {
+        "id": 141,
+        "champion": "Kayn"
+    },
+    {
+        "id": 85,
+        "champion": "Kennen"
+    },
+    {
+        "id": 121,
+        "champion": "Kha'Zix"
+    },
+    {
+        "id": 203,
+        "champion": "Kindred"
+    },
+    {
+        "id": 240,
+        "champion": "Kled"
+    },
+    {
+        "id": 96,
+        "champion": "KogMaw"
+    },
+    {
+        "id": 7,
+        "champion": "Leblanc"
+    },
+    {
+        "id": 64,
+        "champion": "Lee Sin"
+    },
+    {
+        "id": 89,
+        "champion": "Leona"
+    },
+    {
+        "id": 876,
+        "champion": "Lillia"
+    },
+    {
+        "id": 127,
+        "champion": "Lissandra"
+    },
+    {
+        "id": 236,
+        "champion": "Lucian"
+    },
+    {
+        "id": 117,
+        "champion": "Lulu"
+    },
+    {
+        "id": 99,
+        "champion": "Lux"
+    },
+    {
+        "id": 54,
+        "champion": "Malphite"
+    },
+    {
+        "id": 90,
+        "champion": "Malzahar"
+    },
+    {
+        "id": 57,
+        "champion": "Maokai"
+    },
+    {
+        "id": 11,
+        "champion": "Master Yi"
+    },
+    {
+        "id": 21,
+        "champion": "Miss Fortune"
+    },
+    {
+        "id": 62,
+        "champion": "Wukong"
+    },
+    {
+        "id": 82,
+        "champion": "Mordekaiser"
+    },
+    {
+        "id": 25,
+        "champion": "Morgana"
+    },
+    {
+        "id": 267,
+        "champion": "Nami"
+    },
+    {
+        "id": 75,
+        "champion": "Nasus"
+    },
+    {
+        "id": 111,
+        "champion": "Nautilus"
+    },
+    {
+        "id": 518,
+        "champion": "Neeko"
+    },
+    {
+        "id": 76,
+        "champion": "Nidalee"
+    },
+    {
+        "id": 56,
+        "champion": "Nocturne"
+    },
+    {
+        "id": 20,
+        "champion": "Nunu"
+    },
+    {
+        "id": 2,
+        "champion": "Olaf"
+    },
+    {
+        "id": 61,
+        "champion": "Orianna"
+    },
+    {
+        "id": 516,
+        "champion": "Ornn"
+    },
+    {
+        "id": 80,
+        "champion": "Pantheon"
+    },
+    {
+        "id": 78,
+        "champion": "Poppy"
+    },
+    {
+        "id": 555,
+        "champion": "Pyke"
+    },
+    {
+        "id": 246,
+        "champion": "Qiyana"
+    },
+    {
+        "id": 133,
+        "champion": "Quinn"
+    },
+    {
+        "id": 497,
+        "champion": "Rakan"
+    },
+    {
+        "id": 33,
+        "champion": "Rammus"
+    },
+    {
+        "id": 421,
+        "champion": "Rek'Sai"
+    },
+    {
+        "id": 526,
+        "champion": "Rell"
+    },
+    {
+        "id": 58,
+        "champion": "Renekton"
+    },
+    {
+        "id": 107,
+        "champion": "Rengar"
+    },
+    {
+        "id": 92,
+        "champion": "Riven"
+    },
+    {
+        "id": 68,
+        "champion": "Rumble"
+    },
+    {
+        "id": 13,
+        "champion": "Ryze"
+    },
+    {
+        "id": 360,
+        "champion": "Samira"
+    },
+    {
+        "id": 113,
+        "champion": "Sejuani"
+    },
+    {
+        "id": 235,
+        "champion": "Senna"
+    },
+    {
+        "id": 147,
+        "champion": "Seraphine"
+    },
+    {
+        "id": 875,
+        "champion": "Sett"
+    },
+    {
+        "id": 35,
+        "champion": "Shaco"
+    },
+    {
+        "id": 98,
+        "champion": "Shen"
+    },
+    {
+        "id": 102,
+        "champion": "Shyvana"
+    },
+    {
+        "id": 27,
+        "champion": "Singed"
+    },
+    {
+        "id": 15,
+        "champion": "Sivir"
+    },
+    {
+        "id": 72,
+        "champion": "Skarner"
+    },
+    {
+        "id": 37,
+        "champion": "Sona"
+    },
+    {
+        "id": 16,
+        "champion": "Soraka"
+    },
+    {
+        "id": 50,
+        "champion": "Swain"
+    },
+    {
+        "id": 517,
+        "champion": "Sylas"
+    },
+    {
+        "id": 134,
+        "champion": "Syndra"
+    },
+    {
+        "id": 223,
+        "champion": "Tahm Kench"
+    },
+    {
+        "id": 163,
+        "champion": "Taliyah"
+    },
+    {
+        "id": 91,
+        "champion": "Talon"
+    },
+    {
+        "id": 44,
+        "champion": "Taric"
+    },
+    {
+        "id": 17,
+        "champion": "Teemo"
+    },
+    {
+        "id": 412,
+        "champion": "Thresh"
+    },
+    {
+        "id": 18,
+        "champion": "Tristana"
+    },
+    {
+        "id": 48,
+        "champion": "Trundle"
+    },
+    {
+        "id": 23,
+        "champion": "Tryndamere"
+    },
+    {
+        "id": 4,
+        "champion": "Twisted Fate"
+    },
+    {
+        "id": 29,
+        "champion": "Twitch"
+    },
+    {
+        "id": 77,
+        "champion": "Udyr"
+    },
+    {
+        "id": 6,
+        "champion": "Urgot"
+    },
+    {
+        "id": 110,
+        "champion": "Varus"
+    },
+    {
+        "id": 67,
+        "champion": "Vayne"
+    },
+    {
+        "id": 45,
+        "champion": "Veigar"
+    },
+    {
+        "id": 161,
+        "champion": "Velkoz"
+    },
+    {
+        "id": 254,
+        "champion": "Vi"
+    },
+    {
+        "id": 112,
+        "champion": "Viktor"
+    },
+    {
+        "id": 8,
+        "champion": "Vladimir"
+    },
+    {
+        "id": 106,
+        "champion": "Volibear"
+    },
+    {
+        "id": 19,
+        "champion": "Warwick"
+    },
+    {
+        "id": 498,
+        "champion": "Xayah"
+    },
+    {
+        "id": 101,
+        "champion": "Xerath"
+    },
+    {
+        "id": 5,
+        "champion": "XinZhao"
+    },
+    {
+        "id": 157,
+        "champion": "Yasuo"
+    },
+    {
+        "id": 777,
+        "champion": "Yone"
+    },
+    {
+        "id": 83,
+        "champion": "Yorick"
+    },
+    {
+        "id": 350,
+        "champion": "Yuumi"
+    },
+    {
+        "id": 154,
+        "champion": "Zac"
+    },
+    {
+        "id": 238,
+        "champion": "Zed"
+    },
+    {
+        "id": 115,
+        "champion": "Ziggs"
+    },
+    {
+        "id": 26,
+        "champion": "Zilean"
+    }   ,
+    {
+        "id": 142,
+        "champion": "Zoe"
+    },
+    {
+        "id": 143,
+        "champion": "Zyra"
+    }
+]

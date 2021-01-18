@@ -10,6 +10,8 @@ import LeaderboardPage from './routes/LeaderboardPage';
 import UpdatePostPage from './routes/UpdatePostPage';
 import UsersearchPage from './routes/UsersearchPage';
 import { PostsContextProvider } from './context/PostsContext';
+import { SummonerContextProvider } from './context/SummonerContext';
+import UserResultPage from './routes/UserResultPage';
 import './App.css'
 
 const history = createBrowserHistory();
@@ -24,7 +26,6 @@ class App extends Component {
       <Router history={history}>
         <Switch>
           <Route exact path="/" component={HomePage}/>
-          <Route exact path="/searchUser" component={UsersearchPage}/>
           <Route exact path="/leaderboard" component={LeaderboardPage}/>
           <Route exact path="/champions" component={ChampionsPage}/>
           <Route exact path="/champions/:id" component={ChampionDetail}/>
@@ -33,7 +34,17 @@ class App extends Component {
         </Switch>
       </Router>
       </div>
-      </PostsContextProvider> 
+      </PostsContextProvider>
+      <SummonerContextProvider>
+      <div className="container">
+      <Router history={history}>
+        <Switch>
+          <Route exact path="/searchUser" component={UsersearchPage}/>
+          <Route exact path="/searchUser/:region/:summonerName" component={UserResultPage}/>
+        </Switch>
+      </Router>
+      </div>
+      </SummonerContextProvider> 
       </div> 
   )
   }

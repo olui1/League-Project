@@ -24,3 +24,24 @@ body {
   height: 300px;
   width: 600px; 
 }
+
+.search-form{
+  margin-top: 300px;
+  margin-bottom: 350px;
+}
+
+.container-userSearch{
+  margin-left: 145px;
+  margin-right: 145px;
+}
+
+.rank-emblem{
+  height: 80px;
+  width: 80px;
+}
+
+.mastery-icon{
+  height: 60px;
+  width: 60px;
+  border-radius: 50%
+}
