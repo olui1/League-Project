@@ -19,7 +19,7 @@ const history = createBrowserHistory();
 class App extends Component {
   render(){
     return(
-      <div> 
+      <> 
       <Navbar/>
       <PostsContextProvider>
       <div className="container">
@@ -45,7 +45,7 @@ class App extends Component {
       </Router>
       </div>
       </SummonerContextProvider> 
-      </div> 
+      </> 
   )
   }
 }

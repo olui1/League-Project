@@ -37,11 +37,11 @@ class ChampionsPage extends Component {
         item.Champions.toLowerCase().includes(lowercasedFilter)
     );
         return (      
-            <div>
+            <>
                 <>
                 <h1 className="mt-5 display-6 text-center" style={{color:"white"}}>Comprehensive Guides For A Player's Need</h1> 
                 </>
-                <div className="d-flex justify-content-end" style={{marginRight: '200px', marginTop: '30px', marginBottom: '10px'}}>
+                <div className="d-flex justify-content-end" style={{marginLeft: '200px' ,marginRight: '200px', marginTop: '30px', marginBottom: '10px'}}>
                     <input type="text" value={filter} onChange={this.handleChange} placeholder="Search Champion"/>
                 </div>
             <div className="champion">
@@ -60,7 +60,7 @@ class ChampionsPage extends Component {
                     )  
                 })}
             </div>
-            </div>
+            </>
         )
     }
 }

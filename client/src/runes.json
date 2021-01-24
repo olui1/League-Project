@@ -1,0 +1,90 @@
+[
+    {
+        "id": 8000,
+        "rune": "Precision"
+    },
+    {
+        "id": 8100,
+        "rune": "Domination"
+    },
+    {
+        "id": 8200,
+        "rune": "Sorcery"
+    },
+    {
+        "id": 8300,
+        "rune": "Inspiration"
+    },
+    {
+        "id": 8400,
+        "rune": "Resolve"
+    },
+    {
+        "id": 8005,
+        "rune": "Press the Attack"
+    },
+    {
+        "id": 8008,
+        "rune": "Lethal Tempo"
+    },
+    {
+        "id": 8021,
+        "rune": "Fleet Footwork"
+    },
+    {
+        "id": 8010,
+        "rune": "Conqueror"
+    },
+    {
+        "id": 8112,
+        "rune": "Electrocute"
+    },
+    {
+        "id": 8124,
+        "rune": "Predator"
+    },
+    {
+        "id": 8128,
+        "rune": "Dark Harvest"
+    },
+    {
+        "id": 9923,
+        "rune": "Hail of Blades"
+    },
+    {
+        "id": 8214,
+        "rune": "Summon Aery"
+    },
+    {
+        "id": 8229,
+        "rune": "Arcane Comet"
+    },
+    {
+        "id": 8230,
+        "rune": "Phase Rush"
+    },
+    {
+        "id": 8437,
+        "rune": "Grasp of the Undying"
+    },
+    {
+        "id": 8439,
+        "rune": "Aftershock"
+    },
+    {
+        "id": 8465,
+        "rune": "Guardian"
+    },
+    {
+        "id": 8351,
+        "rune": "Glacial Augment"
+    },
+    {
+        "id": 8360,
+        "rune": "Unsealed Spellbook"
+    },
+    {
+        "id": 8358,
+        "rune": "Omnistone"
+    }
+]

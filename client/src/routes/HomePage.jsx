@@ -3,7 +3,7 @@ import Header from '../components/Header';
 import PostsList from '../components/PostsList'
 
 
-class HomePage extends React.Component{
+class HomePage extends Component{
     constructor(props){
         super(props);
         this.onCreatePage = this.onCreatePage.bind(this);

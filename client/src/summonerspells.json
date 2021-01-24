@@ -1,0 +1,46 @@
+[
+    {
+        "id": 7,
+        "spell": "Heal"
+    },
+    {
+        "id": 6,
+        "spell": "Ghost"
+    },
+    {
+        "id": 21,
+        "spell": "Barrier"
+    },
+    {
+        "id": 3,
+        "spell": "Exhaust"
+    },
+    {
+        "id": 32,
+        "spell": "Mark"
+    },
+    {
+        "id": 13,
+        "spell": "Clarity"
+    },
+    {
+        "id": 4,
+        "spell": "Flash"
+    },
+    {
+        "id": 12,
+        "spell": "Teleport"
+    },
+    {
+        "id": 11,
+        "spell": "Smite"
+    },
+    {
+        "id": 1,
+        "spell": "Cleanse"
+    },
+    {
+        "id": 14,
+        "spell": "Ignite"
+    }
+]

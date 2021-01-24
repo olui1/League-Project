@@ -37,7 +37,6 @@ const PostsList = (props) => {
     }
 
     return (
-        <div>
             <div className="d-grid mb-4 gap-3">
                 {posts && posts.map(post => {
                     return(
@@ -52,7 +51,6 @@ const PostsList = (props) => {
                     )  
                 })}
             </div>           
-        </div>
     )
 }
 

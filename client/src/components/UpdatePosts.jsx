@@ -7,7 +7,6 @@ const UpdatePosts = (props) => {
     const { id } = useParams();
     const [name, setName] = useState("");
     const [comment, setComment] = useState("");
-    const [success, setSuccess] = useState(false);
 
     let history = useHistory();
 

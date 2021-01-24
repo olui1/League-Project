@@ -32,7 +32,7 @@ export default class ChampionDetail extends Component {
 
         if (isLoading && champions && abilities.length > 0) {
             return(
-                <div>
+                <div class="d-flex flex-column">
                     <div className="d-flex justify-content-center" key={champions.id}>
                         <img className="championLoadImage" src={`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champions.ChampionsNoSpace}_0.jpg`}/>  
                     </div> 
@@ -41,27 +41,27 @@ export default class ChampionDetail extends Component {
                     </div>
                     {abilities.map((champ, index) => {
                         for(const property in champ){
-                            if(champ[property] == "")
+                            if(champ[property] === "")
                                 champ[property] = 'N/A'
                         }
                         return(
-                            <div key={index}>
-                            <div className="d-flex p-3 mb-3 rounded" style={{backgroundColor: "#290661", color: "white", borderColor:"black"}}>
-                                <div className="me-auto m-3">
+                  
+                            <div key={index} className="d-flex justify-content-around p-3 mb-3 rounded" style={{backgroundColor: "#290661", color: "white", borderColor:"black"}}>
+                                <div className="group-1">
                                 <img src={process.env.PUBLIC_URL + `/skills/${champions.ChampionsNoSpace}${champ.Type}.png`}/> <br/>
                                 {champ.Ability}
                                 </div>
-                                <div className="me-auto m-3">
+                                <div className="group-2">
                                 Type: {champ.Type} <br/>
                                 Range: {champ.Range} <br/>
                                 Cooldown: {champ.Cooldown} <br/>
                                 Cost: {champ.Cost} 
                                 </div>
-                                <div className="m-3">
+                                <div className="group-3">
                                 {champ.Description}
                                 </div>
                             </div>
-                            </div>
+
                         )
                     })}  
                 </div>

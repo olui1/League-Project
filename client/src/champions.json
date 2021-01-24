@@ -72,6 +72,10 @@
         "champion": "Cassiopeia"
     },
     {
+        "id": 28,
+        "champion": "Evelynn"
+    },
+    {
         "id": 31,
         "champion": "Chogath"
     },
@@ -602,5 +606,9 @@
     {
         "id": 143,
         "champion": "Zyra"
+    },
+    {
+        "id": 234,
+        "champion": "Viego"
     }
 ]
