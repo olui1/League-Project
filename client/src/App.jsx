@@ -22,7 +22,7 @@ class App extends Component {
       <> 
       <Navbar/>
       <PostsContextProvider>
-      <div className="container">
+      <div className="container-sm">
       <Router history={history}>
         <Switch>
           <Route exact path="/" component={HomePage}/>
@@ -36,7 +36,7 @@ class App extends Component {
       </div>
       </PostsContextProvider>
       <SummonerContextProvider>
-      <div className="container">
+      <div className="container-sm">
       <Router history={history}>
         <Switch>
           <Route exact path="/searchUser" component={UsersearchPage}/>

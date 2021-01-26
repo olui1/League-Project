@@ -19,7 +19,7 @@ class UserResultPage extends Component{
             matchlistInfo: [],
             matchInfo: [],
             isLoading: false,
-            matchInfoisLoading: false
+            matchInfoisLoading: false,
         }
     }
 
@@ -64,43 +64,42 @@ class UserResultPage extends Component{
                 summonerInfo: idResponse.data,
                 masteryInfo: topMastery,
                 matchlistInfo: matchlistResponse.data.matches,
-                isLoading: true
+                isLoading: true,
             }) 
         }
+        
         else{
             this.setState({
                 rankInfo: infoResponse.data,
                 summonerInfo: idResponse.data,
                 masteryInfo: topMastery,
                 matchlistInfo: matchlistResponse.data.matches,
-                isLoading: true
+                isLoading: true,
             })
         }
-
-        console.log(this.state.rankInfo)
-        console.log(this.state.summonerInfo)
-        console.log(this.state.masteryInfo)
-        console.log(this.state.matchlistInfo)
-        console.log(this.state.matchInfo)
     };
 
     render() {
-
         if(this.state.isLoading, this.state.matchInfoisLoading)
+                
             return (
-                <div className="container-userSearch">
-                    <UserResultPageHeader getSummonerInfo={this.state.summonerInfo}/>
-                    <div class="d-flex justify-content-center">
-                        <div className="left-content">
-                            <UserInfo getRankInfo={this.state.rankInfo}/>
-                            <ChampionMastery getMasteryInfo={this.state.masteryInfo}/>
+                    <div className="d-sm-flex flex-sm-wrap flex-column">
+                        <div className="row">
+                        <div className="user-result-header" >
+                        <UserResultPageHeader getSummonerInfo={this.state.summonerInfo}/>
                         </div>
-                        <div className="right-content">
-                            <MatchHistory getMatchInfo={this.state.matchInfo} getSummonerInfo={this.state.summonerInfo}/>
+                        <div className="d-sm-flex justify-content-center">
+                            <div className="left-content">
+                                <UserInfo getRankInfo={this.state.rankInfo}/>
+                                <ChampionMastery getMasteryInfo={this.state.masteryInfo}/>
+                            </div>
+                            <div className="right-content">
+                                <MatchHistory getMatchInfo={this.state.matchInfo} getSummonerInfo={this.state.summonerInfo}/>
+                            </div>
+                        </div>
                         </div>
                     </div>
-                </div>
-                )
+                    ) 
         else{return(<div>Loading..</div>)}
         
     }

@@ -46,7 +46,7 @@ export default class ChampionDetail extends Component {
                         }
                         return(
                   
-                            <div key={index} className="d-flex justify-content-around p-3 mb-3 rounded" style={{backgroundColor: "#290661", color: "white", borderColor:"black"}}>
+                            <div key={index} className="d-sm-flex justify-content-around p-3 mb-3 rounded" style={{backgroundColor: "#290661", color: "white", borderColor:"black"}}>
                                 <div className="group-1">
                                 <img src={process.env.PUBLIC_URL + `/skills/${champions.ChampionsNoSpace}${champ.Type}.png`}/> <br/>
                                 {champ.Ability}

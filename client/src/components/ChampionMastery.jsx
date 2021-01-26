@@ -5,11 +5,11 @@ const ChampionMastery = (props) => {
     
     return (
         <div className="mastery-points">
-            <div className="d-flex justify-content-start">
-            <div className="d-flex rounded" style={{backgroundColor: "#290661", color: "white", borderColor:"black", width: '290px', display: 'flex', justifyContent: 'center'}}>      
-                <h4 style={{color:"white", fontSize: '20px', alignSelf: 'center'}}>Champion Mastery Points</h4>
+           
+            <div className="d-flex" style={{backgroundColor: "#290661", color: "white", borderColor:"black", display: 'flex', justifyContent: 'center'}}>      
+                <h4 style={{color:"white", width:"290px", fontSize: '20px', textAlign: 'center'}}>Champion Mastery Points</h4>
             </div>
-            </div>
+ 
           {props.getMasteryInfo.map(post => {
               for(let i of champions){
                   if(i.id === post.championId){
@@ -17,8 +17,8 @@ const ChampionMastery = (props) => {
                   }
               }
               return(
-                <div key={post.championId} className="d-flex justify-content-start">
-                    <div className="d-flex p-3 rounded" style={{backgroundColor: "#290661", color: "white", borderColor:"black", width: '290px', display: 'flex', justifyContent: 'space-between'}}>      
+                <div key={post.championId} >
+                    <div className="mastery-champion">      
                                 <div style={{alignSelf: 'center', marginLeft: '10px'}}>
                                     <img alt={`${post.championId}`} className="mastery-icon" src={process.env.PUBLIC_URL + `/championicons/${post.championId}.png`}/>
                                 </div>

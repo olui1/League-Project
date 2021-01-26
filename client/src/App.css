@@ -2,15 +2,15 @@ body {
     background-color:#140330;
   }
 
-  .champion {
-    display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(100px,1fr));
-    grid-gap: 12px 12px;
-    padding: 20px;
-    background-color: #290661;
-    margin-left: 200px;
-    margin-right: 200px;
-    margin-bottom: 45px;
+.champion {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(100px,1fr));
+  grid-gap: 12px 12px;
+  padding: 20px;
+  background-color: #290661;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-bottom: 45px;
 }
 
 .championImage {
@@ -21,19 +21,13 @@ body {
 .championLoadImage{
   margin-top: 25px;
   margin-bottom: 10px;
-  height: 300px;
-  width: 600px; 
+  height: 250px;
+  width: 510px; 
 }
 
 .search-form{
   margin-top: 300px;
   margin-bottom: 350px;
-}
-
-.container-userSearch{
-  width: 1000px;
-  margin-left: 145px;
-  margin-right: 145px;
 }
 
 .rank-emblem{
@@ -78,19 +72,31 @@ body {
   width: 20px;
 }
 
+.mastery-points{
+  width: 290px;
+}
+
+.mastery-champion{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 8px;
+  background-color: #290661;
+  color: white;
+  border-color: black;
+  width: 290px;
+}
+
 .left-content{
   display: inline-block;
   vertical-align: top;
-  width: 300px;
-
 }
 
 .right-content{
   display: inline-block;
   vertical-align: top;
-  width: 600px;
   margin-left: 15px;
-
 }
 
 .match-stats{
@@ -110,15 +116,12 @@ body {
 .match-teams{
   display: table-cell;
   overflow: hidden;
-  /* text-overflow: ellipsis; */
   vertical-align: middle;
   width: 180px;
   margin-left: 20px;
 }
 
 .players{
-  /* overflow: hidden; */
-  /* text-overflow: ellipsis; */
   white-space: nowrap;
   width: 90px;
   height: 23px;
@@ -136,7 +139,6 @@ body {
   font-size: 13px;
   text-overflow: ellipsis;
   max-width: 63px;
-  /* max-height: 23px; */
   overflow: hidden;
   vertical-align: middle;
   margin-left: 3px;
@@ -176,13 +178,60 @@ body {
 }
 
 .group-1{
-  width: 120px;
+  flex-grow: 2;
+  max-width: 150px;
 }
 
 .group-2{
-  width: 100px;
+  flex-grow: 2;
+  max-width: 200px;
 }
 
 .group-3{
-  width: 920px;
+  flex-grow: 2;
+  max-width: 800px;
+}
+
+.matchinfo{
+  padding: 20px;
+  border-radius: 20px;
+  width: 600px;
+}
+
+.user-result-header{
+  width: fit-content;
+  margin-left: 185px;
+}
+
+/*Mobile*/
+@media(max-width: 520px){
+  .right-content, .left-content, .matchlist{
+    width: auto;
+    margin: auto;
+  }
+
+  .mastery-points, .mastery-champion{
+    width: 475px;
+  }
+
+  .matchinfo, .match-stats, .match-history-champ, .match-history-rune, .match-history-spell, .match-teams, .match-items, .players-champImage, .players-summoner{
+    width: auto;
+    margin: 0%;
+  }
+
+  .match-KDA{
+    width: 45px;
+  }
+   
+  .match-player-config{
+    width: 68px;
+  }
+
+  .team1, .team2{
+    text-overflow: ellipsis;
+  }
+
+  .user-result-header{
+    margin-left: 0%;
+  }
 }

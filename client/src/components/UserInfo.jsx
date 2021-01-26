@@ -12,7 +12,7 @@ if(props.getRankInfo != null){
         return(
             <>
             <div className="d-flex justify-content-start mt-3 mb-3 rounded" >
-                <div className="d-flex p-4 rounded" style={{backgroundColor: "#290661", color: "white", borderColor:"black", width: '290px'}}>
+                <div className="d-flex flex-fill p-4 rounded" style={{backgroundColor: "#290661", color: "white", borderColor:"black", width: '290px'}}>
                     <div style={{alignSelf: 'center'}}>
                         <img className="rank-emblem" src={process.env.PUBLIC_URL + `/rankicons/${tier}.png`}/>
                     </div>
@@ -25,7 +25,7 @@ if(props.getRankInfo != null){
                 </div>
             </div>
             <div className="d-flex justify-content-start mt-3 mb-3 rounded" >    
-                <div className="d-flex p-4 rounded" style={{backgroundColor: "#290661", color: "white", borderColor:"black", width: '290px'}}>
+                <div className="d-flex flex-fill p-4 rounded" style={{backgroundColor: "#290661", color: "white", borderColor:"black", width: '290px'}}>
                     <div style={{alignSelf: 'center'}}>
                         <img className="rank-emblem" src={process.env.PUBLIC_URL + `/rankicons/${props.getRankInfo[0].tier}.png`}/>
                     </div>
@@ -43,8 +43,8 @@ if(props.getRankInfo != null){
     else{
         const{wins, losses, tier, rank, leaguePoints} = props.getRankInfo;
         return (
-            <div className="d-flex justify-content-start mt-3 mb-3 rounded" >
-                <div className="d-flex p-4 rounded" style={{backgroundColor: "#290661", color: "white", borderColor:"black"}}>
+            <div className="d-flex justify-content-start mt-3 mb-3 rounded">
+                <div className="d-flex flex-fill p-4 rounded" style={{backgroundColor: "#290661", color: "white", borderColor:"black", width: '290px'}}>
                     <div style={{alignSelf: 'center'}}>
                         <img className="rank-emblem" src={process.env.PUBLIC_URL + `/rankicons/${tier}.png`}/>
                     </div>
@@ -61,7 +61,11 @@ if(props.getRankInfo != null){
 }
 else{
     return (
-    <div>NOT FOUND</div>) 
+    <div className="d-flex justify-content-start mt-3 mb-3 rounded" >
+        <div className="d-flex flex-fill p-4 rounded" style={{backgroundColor: "#290661", color: "white", borderColor:"black", width: '290px'}}>
+            User has not been placed in a rank yet
+        </div>
+    </div>) 
 }
 }
 

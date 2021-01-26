@@ -114,7 +114,7 @@ const MatchHistory = (props) => {
                     })}
 
                 <div className="d-flex mt-3 justify-content-start" style={{marginBottom: '10px'}}>
-                   <div className="p-2 rounded" style={{tableLayout: 'fixed', width:'600px', backgroundColor: `${currentPlayer.win === "Victory"?"#0c5929":currentPlayer.win === "Defeat"?"#ba1a1a":"#505452"}`, color: "white", borderColor:"black", display: 'table', justifyContent: 'space-between'}}>
+                   <div className="matchinfo" style={{tableLayout: 'fixed', backgroundColor: `${currentPlayer.win === "Victory"?"#0c5929":currentPlayer.win === "Defeat"?"#ba1a1a":"#505452"}`, color: "white", borderColor:"black", display: 'table', justifyContent: 'space-between'}}>
                     <div className="match-stats"> 
                         {/* {gameCreation.format("MMM Do YYYY h:mm a")} Good for Hover*/}
                         {match.queueId} <br/>

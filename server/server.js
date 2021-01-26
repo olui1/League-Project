@@ -8,9 +8,8 @@ const userSearch = require('./routes/userSearch');
 const infoSearch = require('./routes/infoSearch');
 const masterySearch = require('./routes/masterySearch');
 const matchList = require('./routes/matchList');
+const leaderboard = require('./routes/leaderboard');
 const match = require('./routes/match');
-const axios = require('axios');
-
 
 // Retrieve API_Key from .env
 const apiKey = process.env.LOL_API_KEY;
@@ -33,6 +32,7 @@ app.use('/api/infosearch', infoSearch);
 app.use('/api/masterysearch', masterySearch);
 app.use('/api/matchlist', matchList);
 app.use('/api/match', match);
+app.use('/api/leaderboard', leaderboard)
 // Create Port
 const port = process.env.PORT || 5000;
 
