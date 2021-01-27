@@ -18,8 +18,7 @@ const UserResultPageHeader = (props) => {
     version()
     if(props.getSummonerInfo != null)
     return (
-        <div className="d-flex flex-row mt-5">
-           
+        <div className="user-result-summonerInfo">
             <div> 
                 <img src={`http://ddragon.leagueoflegends.com/cdn/${currentVersion}/img/profileicon/${profileIconId}.png`} style={{height: '100px', width: '100px'}}/>
             </div>

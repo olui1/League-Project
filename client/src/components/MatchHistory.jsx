@@ -131,7 +131,6 @@ const MatchHistory = (props) => {
                             <img alt={`${currentPlayer.spell2}`} className="matchHistory-spellIcon" src={process.env.PUBLIC_URL + `/summonerspells/${currentPlayer.spell2}.png`}/>
                         </div>
                         <div className="match-history-rune">
-                            {console.log(currentPlayer.rune1)}
                             <img alt={`${currentPlayer.rune1}`} className="matchHistory-runeIcon" src={process.env.PUBLIC_URL + `/runeicons/${currentPlayer.rune1}.png`}/> <br/>
                             <img alt={`${currentPlayer.rune2}`} className="matchHistory-runeIcon" src={process.env.PUBLIC_URL + `/runeicons/${currentPlayer.rune2}.png`}/>
                         </div>
@@ -151,7 +150,6 @@ const MatchHistory = (props) => {
                             return(
                                     <div className="item">
                                         <img alt={`${item}`} className={`matchHistory-itemIcon${isEmpty?"-empty":""}`} src={`http://ddragon.leagueoflegends.com/cdn/${currentVersion}/img/item/${item}.png`}/>
-                                        {/* {item} Testing Purposes */}
                                     </div>
                             )
                         })}

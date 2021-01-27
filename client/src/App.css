@@ -27,7 +27,41 @@ body {
 
 .search-form{
   margin-top: 300px;
-  margin-bottom: 350px;
+}
+
+.search-box{
+  display: flex;
+  justify-content: center;
+}
+
+.user-result-summonerInfo{
+  display: flex;
+  direction: row;
+  width: 500px;
+}
+
+.user-result-search-box{
+  display: flex;
+  align-self: flex-end;
+  margin-left: 120px;
+}
+
+.region-box{
+  width: 68px;
+  height: 50px;
+}
+
+.user-result-region-box{
+  width: 68px;
+  height: 50px;
+}
+
+.input-box{
+  width: 580px;
+}
+
+.user-result-input-box{
+  width: 240px;
 }
 
 .rank-emblem{
@@ -199,9 +233,12 @@ body {
 }
 
 .user-result-header{
-  width: fit-content;
+  display: flex;
+  flex-direction: row;
   margin-left: 185px;
+  margin-top: 80px;
 }
+
 
 /*Mobile*/
 @media(max-width: 520px){
@@ -233,5 +270,37 @@ body {
 
   .user-result-header{
     margin-left: 0%;
+    display: inline;
+    width: auto;
+    margin-top: 15px;
   }
+
+  .user-result-summonerInfo{
+    display: flex;
+    direction: row;
+    width: auto;
+  }
+
+  .user-result-search-box{
+    display: flex;
+    align-self: flex-end;
+    margin-left: 0%;
+    margin-top: 10px;
+  }
+
+  .user-result-input-box{
+    width: 410px;
+  }
+  
+  
+  .search-form{
+    margin-top: 0%;
+    margin-bottom: 0%;
+    width: auto;
+  }
+
+  .search-box{
+    display: flex;
+    width: auto;
+  } 
 }

@@ -9,7 +9,6 @@ export function getVersion(successcallback, errorcallback){
       }
     })
     .catch(err => {
-      // catch error
       if(errorcallback != null){
          errorcallback(err);
       }
