@@ -41,14 +41,14 @@ class ChampionsPage extends Component {
                 <>
                 <h1 className="mt-5 display-6 text-center" style={{color:"white"}}>Comprehensive Guides For A Player's Need</h1> 
                 </>
-                <div className="d-flex justify-content-end" style={{marginLeft: '200px' ,marginRight: '200px', marginTop: '30px', marginBottom: '10px'}}>
+                <div className="champion-searchbar">
                     <input type="text" value={filter} onChange={this.handleChange} placeholder="Search Champion"/>
                 </div>
-            <div className="d-sm-flex justify-content-sm-start flex-wrap me-5 ms-5 pe-4 ps-4">
+            <div className="champion-grid">
                 
                 {filteredData.map(champion => {
                     return(
-                        <div className="px-md-1" key={champion.id} style={{backgroundColor: "#290661", color: "white"}}>
+                        <div className="champion-grid-item" key={champion.id} style={{backgroundColor: "#290661", color: "white"}}>
                             <div>
                                 <a href={`/champions/${champion.Champions}`}>
                                     <img className="championImage" alt={`${champion.ChampionsNoSpace}`} src={`http://ddragon.leagueoflegends.com/cdn/img/champion/tiles/${champion.ChampionsNoSpace}_0.jpg`}/>
