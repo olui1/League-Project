@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
-import {Alert} from 'react-bootstrap';
 import PostsFinder from '../apis/PostsFinder';
 
 const UpdatePosts = (props) => {
