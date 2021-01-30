@@ -1,6 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
+const path = require("path");
 const abilties = require('./routes/abilities');
 const posts = require('./routes/posts');
 const champions = require('./routes/champions');
@@ -33,6 +34,14 @@ app.use('/api/masterysearch', masterySearch);
 app.use('/api/matchlist', matchList);
 app.use('/api/match', match);
 app.use('/api/leaderboard', leaderboard)
+
+if(process.env.NODE_ENV === 'production'){
+    app.use(express.static('../client/build'));
+    app.get('*', (req,res) => {
+        res.sendFile(path.resolve(__dirname, '../client', 'build', 'index.html'));
+    })
+}
+
 // Create Port
 const port = process.env.PORT || 5000;
 
