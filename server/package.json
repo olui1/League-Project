@@ -8,8 +8,9 @@
     "server": "nodemon server.js",
     "client": "npm start --prefix ../client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "aws-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix ../client && npm run build --prefix ../client"
+    "aws-postbuild": "NPM_USE_PRODUCTION=false npm install --prefix ../client && npm run build --prefix ../client"
   },
+  "engines": { "node" : "12.20.1" },
   "keywords": [],
   "author": "",
   "license": "ISC",
