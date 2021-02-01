@@ -44,7 +44,7 @@ The frontend component utilzes the React framework to render components mentione
 ### **Backend & Database**
 The backend component consists of the runtime environment Nodejs paired with the backend framework, Express. Through the backend, the mysql database connection is made which allows queries to be made to a database through Amazon RDS. The most important advantage of RDS is that the database is stored in the cloud server, which makes backup and security a lot more promising and efficient.
 
-## UML Diagram
+## <ins> UML Diagram </ins>
 
 ### **Overview**
 
