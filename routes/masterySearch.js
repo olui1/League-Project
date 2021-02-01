@@ -1,12 +1,13 @@
 const express = require("express");
 const router = express.Router();
-const infoSearchApi = require('../db/infoSearch_api');
+const path = require('path');
+const masterySearchApi = require(path.join(__dirname,'../db/masterySearch_api'));
 
 
 // Get League Entries In All Queues
 router.get('/:region/:id', async (req, res, next) => {
     try {
-        let results = await infoSearchApi.all(req.params.region, req.params.id);
+        let results = await masterySearchApi.all(req.params.region, req.params.id);
         console.log(req.params)
         res.json(results);
     }

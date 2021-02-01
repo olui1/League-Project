@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const matchListApi = require('../db/matchList_api');
+const path = require('path');
+const matchListApi = require(path.join(__dirname,'../db/matchList_api'));
 
 
 // Get matchlist

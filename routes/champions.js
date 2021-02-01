@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const db = require('../db/champions_db');
+const path = require('path');
+const db = require(path.join(__dirname, '../db/champions_db'));
 
 // Get all champions
 router.get('/', async (req, res, next) => {

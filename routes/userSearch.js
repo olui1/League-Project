@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const userSearchApi = require('../db/userSearch_api');
+const path = require('path');
+const userSearchApi = require(path.join(__dirname,'../db/userSearch_api'));
 
 
 // Get EncryptedSummonerID and EncryptedAccountID

@@ -11,6 +11,7 @@ const masterySearch = require('./routes/masterySearch');
 const matchList = require('./routes/matchList');
 const leaderboard = require('./routes/leaderboard');
 const match = require('./routes/match');
+const path = require('path');
 
 // Retrieve API_Key from .env
 const apiKey = process.env.LOL_API_KEY;
@@ -23,6 +24,7 @@ app.use(cors());
 
 // express middleware
 app.use(express.json());
+
 
 // Use Routes
 app.use('/api/posts', posts);
@@ -37,10 +39,10 @@ app.use('/api/leaderboard', leaderboard)
 
 
 
-if(true){
-    app.use(express.static('build'));
-    app.get('/*', (req,res) => {
-        res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
+if(process.env.NODE_ENV === 'production'){
+    app.use(express.static('client/build'));
+    app.get('*', (req, res) => {
+        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
     })
 }
 

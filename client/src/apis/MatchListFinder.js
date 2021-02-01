@@ -1,5 +1,5 @@
 import axios from 'axios';
 
 export default axios.create({
-    baseURL: "http://localhost:5000/api/matchList",
+    baseURL: "http://league-hub.herokuapp.com/api/matchList",
 });

@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const leaderboardApi = require('../db/leaderboard_api');
+const path = require('path');
+const leaderboardApi = require(path.join(__dirname,'../db/leaderboard_api'));
 
 router.get('/', async (req, res, next) => {
     try {

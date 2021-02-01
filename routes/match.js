@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const matchApi = require('../db/match_api');
+const path = require('path');
+const matchApi = require(path.join(__dirname,'../db/match_api'));
 
 
 // Get one match
