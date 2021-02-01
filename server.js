@@ -11,7 +11,7 @@ const masterySearch = require('./routes/masterySearch');
 const matchList = require('./routes/matchList');
 const leaderboard = require('./routes/leaderboard');
 const match = require('./routes/match');
-const path = require('path');
+
 
 // Retrieve API_Key from .env
 const apiKey = process.env.LOL_API_KEY;
