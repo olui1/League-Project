@@ -6,7 +6,7 @@ let championsdb = {};
 championsdb.all = () => {
     return new Promise((resolve, reject) => {
         mysqlConf.getConnection((err, connection) => {
-            connection.query('SELECT * FROM league.champions', (err, results) => {
+            connection.query(`SELECT * FROM ${process.env.MYSQLDATABASE}.champions`, (err, results) => {
                 if(err){
                     return reject(err);
                 }
