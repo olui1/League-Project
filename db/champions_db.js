@@ -21,7 +21,7 @@ championsdb.all = () => {
 championsdb.one = (champion) => {
     return new Promise((resolve, reject) => {
         mysqlConf.getConnection((err, connection) => {
-            connection.query('SELECT * FROM league.champions where Champions = ?', [champion], (err, results) => {
+            connection.query(`SELECT * FROM ${process.env.MYSQLDATABASE}.champions where Champions = ?`, [champion], (err, results) => {
                 if(err){
                     return reject(err);
                 }

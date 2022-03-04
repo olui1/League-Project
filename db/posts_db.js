@@ -22,7 +22,7 @@ postsdb.one = (name, comment) => {
 postsdb.all = () => {
     return new Promise((resolve, reject) => {
         mysqlConf.getConnection((err, connection) => {
-            connection.query('SELECT * FROM league.posts', (err, results) => {
+            connection.query(`SELECT * FROM ${process.env.MYSQLDATABASE}.posts`, (err, results) => {
                 if(err){
                     return reject(err);
                 }
@@ -38,7 +38,7 @@ postsdb.all = () => {
 postsdb.rone = (id) => {
     return new Promise((resolve, reject) => {
         mysqlConf.getConnection((err, connection) => {
-            connection.query('SELECT * FROM league.posts where id = ?', [id], (err, results) => {
+            connection.query(`SELECT * FROM ${process.env.MYSQLDATABASE}.posts where id = ?`, [id], (err, results) => {
                 if(err){
                     return reject(err);
                 }
@@ -54,7 +54,7 @@ postsdb.rone = (id) => {
 postsdb.update = (name, comment, id) => {
     return new Promise((resolve, reject) => {
         mysqlConf.getConnection((err, connection) => {
-            connection.query('UPDATE league.posts SET name = ?, comment = ? where id = ?', [name, comment, id], (err, results) => {
+            connection.query(`UPDATE ${process.env.MYSQLDATABASE}.posts SET name = ?, comment = ? where id = ?`, [name, comment, id], (err, results) => {
                 if(err){
                     return reject(err);
                 }
@@ -70,7 +70,7 @@ postsdb.update = (name, comment, id) => {
 postsdb.delete = (id) => {
     return new Promise((resolve, reject) => {
         mysqlConf.getConnection((err, connection) => {
-            connection.query('DELETE FROM league.posts where id = ?', [id], (err, results) => {
+            connection.query(`DELETE FROM ${process.env.MYSQLDATABASE}.posts where id = ?`, [id], (err, results) => {
                 if(err){
                     return reject(err);
                 }
