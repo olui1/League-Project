@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import queues from '../queues.json';
 import champions from '../champions.json';
 import summonerspells from '../summonerspells.json';
 import runes from '../runes.json';
@@ -33,11 +32,12 @@ const MatchHistory = (props) => {
 
         <div className="matchlist">
                {version()}
-            {props.getMatchInfo.map(match => {
-                var gameCreation = new moment(match.gameCreation);
-                var gameDuration = moment.duration(match.gameDuration, 'seconds')
+            {React.Children.toArray(
+            props.getMatchInfo.map(match => {
+                var gameCreation = new moment(match.info.gameCreation);
+                var gameDuration = moment.duration(match.info.gameDuration, 'seconds')
                 var formatted = gameDuration.format("mm[m] ss[s]");
-             
+
                 var players = [];
                 var itemArr = [];
                 var champArr = [];
@@ -46,43 +46,43 @@ const MatchHistory = (props) => {
                 var playersMap = new Map();
                 var currentPlayer = new CurrentPlayer();
 
-
-                for(let i of queues){
-                    if(i.queueId === match.queueId){
-                        match.queueId = i.description
-                    }
-                }
                 if(match.gameDuration <= 360)
                     currentPlayer.win = 'Remake';
                 if(isLoading)
                 return(
                     <div>
-                    {match.participantIdentities.forEach(summoner => {
-                   players[summoner.participantId] = summoner.player.summonerName;
-                        playersMap.set(summoner.participantId, summoner.player.summonerName)
+                    {match.info.participants.forEach(summoner => {
+                        players.push(summoner.summonerName);
+                        playersMap.set(summoner.summonerId, summoner.summonerName)
                     })}
                     {playersMap.forEach((value, key) => {
                         if(value === summonerName){
-                            currentPlayer.playerId = key;
+                            currentPlayer.playerId = key;                         
                         }
                     })}
                     
-                    {match.participants.forEach(player => {
-                        champArr.push(player.championId)
+                    {match.info.participants.forEach(player => {
+                        champArr.push(player.championId);
 
-                        if(player.participantId === currentPlayer.playerId){
+                        if(player.summonerId === currentPlayer.playerId){
                             currentPlayer.ChampionId = player.championId;
-                            currentPlayer.spell1 = player.spell1Id;
-                            currentPlayer.spell2 = player.spell2Id;
-                            currentPlayer.rune1 = player.stats.perk0;
-                            currentPlayer.rune2 = player.stats.perkSubStyle;
-                            currentPlayer.kills = player.stats.kills;
-                            currentPlayer.deaths = player.stats.deaths;
-                            currentPlayer.assists = player.stats.assists;
-                            for(let i = 0; i <= 6; i++){
-                                itemArr.push(player.stats[`item${i}`])
-                            }
-                            currentPlayer.cs = (player.stats.neutralMinionsKilled + player.stats.totalMinionsKilled)
+                            currentPlayer.spell1 = player.summoner1Id;
+                            currentPlayer.spell2 = player.summoner2Id;
+                            currentPlayer.rune1 = player.perks.styles[0].style;
+                            currentPlayer.rune2 = player.perks.styles[1].style;
+                            currentPlayer.kills = player.kills;
+                            currentPlayer.deaths = player.deaths;
+                            currentPlayer.assists = player.assists;
+                            
+                            itemArr.push(player.item0);
+                            itemArr.push(player.item1);
+                            itemArr.push(player.item2);
+                            itemArr.push(player.item3);
+                            itemArr.push(player.item4);
+                            itemArr.push(player.item5);
+                            itemArr.push(player.item6);
+                            
+                            currentPlayer.cs = (player.neutralMinionsKilled + player.totalMinionsKilled)
                             for(let i of champions){
                                 if(i.id === currentPlayer.ChampionId){
                                     currentPlayer.ChampionId = i.champion
@@ -104,10 +104,10 @@ const MatchHistory = (props) => {
                                     currentPlayer.rune2 = i.rune
                                 }
                             }
-                            if(player.stats.win === true && currentPlayer.win!=='Remake'){
+                            if(player.win === true && currentPlayer.win!=='Remake'){
                                 currentPlayer.win = 'Victory'
                             }
-                            else if(player.stats.win === false && currentPlayer.win!=='Remake'){
+                            else if(player.win === false && currentPlayer.win!=='Remake'){
                                 currentPlayer.win = 'Defeat'
                             }
                         }   
@@ -116,8 +116,7 @@ const MatchHistory = (props) => {
                 <div className="d-flex mt-3 justify-content-start" style={{marginBottom: '10px'}}>
                    <div className="matchinfo" style={{tableLayout: 'fixed', backgroundColor: `${currentPlayer.win === "Victory"?"#0c5929":currentPlayer.win === "Defeat"?"#ba1a1a":"#505452"}`, color: "white", borderColor:"black", display: 'table', justifyContent: 'space-between'}}>
                     <div className="match-stats"> 
-                        {/* {gameCreation.format("MMM Do YYYY h:mm a")} Good for Hover*/}
-                        {match.queueId} <br/>
+                        {match.info.gameType} <br/>
                         {gameCreation.fromNow(true)} ago <br/>
                         {currentPlayer.win} <br/>
                         {formatted}
@@ -156,11 +155,10 @@ const MatchHistory = (props) => {
                     </div>
                     
                     <div className="match-teams">
-                        {players.shift()}
                         {champArr.forEach(champ => {
                             for(let i of champions){
                                 if(i.id === champ){
-                                    champPicArr.push(i.champion)
+                                    champPicArr.push(i.champion);
                                 }
                             }
                         })}
@@ -254,7 +252,7 @@ const MatchHistory = (props) => {
                 </div>
                     </div>
                 )
-                })}
+                }))}
         </div>
     )
 }

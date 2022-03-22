@@ -14,4 +14,5 @@ infoSearchApi.all = (region, id) => {
 }) .catch(err => reject(err))
     })
 }
+
 module.exports = infoSearchApi;

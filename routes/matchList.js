@@ -8,7 +8,6 @@ const matchListApi = require(path.join(__dirname,'../db/matchList_api'));
 router.get('/:region/:accountId', async (req, res, next) => {
     try {
         let results = await matchListApi.all(req.params.region, req.params.accountId);
-        console.log(req.params)
         res.json(results);
     }
     catch(e) {

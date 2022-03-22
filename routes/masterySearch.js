@@ -8,7 +8,6 @@ const masterySearchApi = require(path.join(__dirname,'../db/masterySearch_api'))
 router.get('/:region/:id', async (req, res, next) => {
     try {
         let results = await masterySearchApi.all(req.params.region, req.params.id);
-        console.log(req.params)
         res.json(results);
     }
     catch(e) {

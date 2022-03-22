@@ -8,7 +8,6 @@ router.get('/', async (req, res, next) => {
     try {
         let results = await db.all();
         res.json(results);
-        console.log(results);
     }
     catch(e) {
         console.log(e);

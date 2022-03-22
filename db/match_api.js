@@ -4,8 +4,17 @@ let matchApi = {};
 
 // Get One Match
 matchApi.all = (platformId, matchId) => {
+    var continent;
+    
     return new Promise((resolve, reject) => {
-        axios.get(`https://${platformId}.api.riotgames.com/lol/match/v4/matches/${matchId}`, {
+        if(platformId === 'na1')
+        continent = 'americas';
+        else if(platformId === 'euw1')
+            continent = 'europe';
+        else{
+            continent = 'asia';
+        }
+        axios.get(`https://${continent}.api.riotgames.com/lol/match/v5/matches/${matchId}`, {
     headers: {
      "X-Riot-Token": process.env.LOL_API_KEY,
     }                        
@@ -14,7 +23,5 @@ matchApi.all = (platformId, matchId) => {
 }) .catch(err => reject(err))
     })
 }
-
-
 
 module.exports = matchApi;

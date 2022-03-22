@@ -8,7 +8,6 @@ const matchApi = require(path.join(__dirname,'../db/match_api'));
 router.get('/:platformId/:matchId', async (req, res, next) => {
     try {
         let results = await matchApi.all(req.params.platformId, req.params.matchId);
-        console.log(req.params)
         res.json(results);
     }
     catch(e) {

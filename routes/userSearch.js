@@ -15,5 +15,4 @@ router.get('/:region/:summonerName', async (req, res, next) => {
     }
 });
 
-
 module.exports = router;

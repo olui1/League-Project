@@ -8,7 +8,6 @@ const infoSearchApi = require(path.join(__dirname,'../db/infoSearch_api'));
 router.get('/:region/:id', async (req, res, next) => {
     try {
         let results = await infoSearchApi.all(req.params.region, req.params.id);
-        console.log(req.params)
         res.json(results);
     }
     catch(e) {

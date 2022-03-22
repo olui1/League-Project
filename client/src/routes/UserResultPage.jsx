@@ -45,7 +45,7 @@ class UserResultPage extends Component{
     var returnarr = []
        let responses = arr.map(match => {
            return new Promise((resolve, reject) => {
-                MatchFinder.get(`/${match.platformId}/${match.gameId}`)
+                MatchFinder.get(`/${this.state.region}/${match}`)
             .then(res => {
                 return resolve(res); 
             }) .catch(err => reject(err))
@@ -67,8 +67,8 @@ class UserResultPage extends Component{
         const idResponse = await UserFinder.get(`/${region}/${summonerName}`);
         const infoResponse = await InfoFinder.get(`/${region}/${idResponse.data.id}`);
         const masteryResponse = await MasteryFinder.get(`/${region}/${idResponse.data.id}`);
-        const matchlistResponse = await MatchListFinder.get(`/${region}/${idResponse.data.accountId}`);
-        this.getMatch(matchlistResponse.data.matches);
+        const matchlistResponse = await MatchListFinder.get(`/${region}/${idResponse.data.puuid}`); 
+        this.getMatch(matchlistResponse.data);
 
         const topMastery = [];
         for(let i=0; i<10; i++){

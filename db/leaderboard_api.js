@@ -14,6 +14,4 @@ leaderboardApi.all = () => {
     })
 }
 
-
-
 module.exports = leaderboardApi;

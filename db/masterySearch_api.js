@@ -15,6 +15,4 @@ masterySearchApi.all = (region, id) => {
     })
 }
 
-
-
 module.exports = masterySearchApi;

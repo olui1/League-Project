@@ -15,6 +15,4 @@ userSearchApi.all = (region, summonerName) => {
     })
 }
 
-
-
 module.exports = userSearchApi;
