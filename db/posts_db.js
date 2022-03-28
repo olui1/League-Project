@@ -6,7 +6,7 @@ let postsdb = {};
 postsdb.one = (name, comment) => {
     return new Promise((resolve, reject) => {
         mysqlConf.getConnection((err, connection) => {
-            connection.query('INSERT INTO league.posts (name, comment) VALUES (?, ?)', [name, comment], (err, results) => {
+            connection.query(`INSERT INTO ${process.env.MYSQLDATABASE}.posts (name, comment) VALUES (?, ?)`, [name, comment], (err, results) => {
                 if(err){
                     return reject(err);
                 }
